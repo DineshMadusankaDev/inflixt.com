@@ -15,7 +15,7 @@ export const article20: InsightArticle = {
   topic: "Web Engineering",
   category: "Web Engineering",
   summary: "An objective architectural evaluation of headless e-commerce (such as Next.js paired with the Shopify Storefront API or custom commerce backends). Discover when headless storefronts deliver genuine conversion leverage and when traditional monolithic platforms remain preferable.",
-  status: "draft",
+  status: "published",
   readTime: "7 min read",
   author: defaultAuthor,
   featured: false,

@@ -15,7 +15,7 @@ export const article06: InsightArticle = {
   topic: "AI & Automation",
   category: "AI & Automation",
   summary: "A pragmatic evaluation framework for engineering and business leaders looking to integrate AI into existing software systems. Learn how to identify high-ROI automation targets, enforce structured JSON schemas, parameterize model selection, and avoid costly AI traps.",
-  status: "draft",
+  status: "published",
   readTime: "7 min read",
   author: defaultAuthor,
   featured: false,

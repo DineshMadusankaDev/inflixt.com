@@ -15,7 +15,7 @@ export const article14: InsightArticle = {
   topic: "Mobile Systems",
   category: "Mobile Systems",
   summary: "A technical planning guide for business and engineering leaders embarking on mobile app development. Explore essential architectural decisions—from offline-first sync models to authentication security and API versioning—before writing a single line of code.",
-  status: "draft",
+  status: "published",
   readTime: "6 min read",
   author: defaultAuthor,
   featured: false,

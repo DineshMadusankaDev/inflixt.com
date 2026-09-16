@@ -15,7 +15,7 @@ export const article07: InsightArticle = {
   topic: "AI & Automation",
   category: "AI & Automation",
   summary: "A practical guide for small business operators looking to implement automation without enterprise budgets. Explore five high-impact operational processes worth automating, how to avoid brittle AI traps, and how to measure real efficiency gains.",
-  status: "draft",
+  status: "published",
   readTime: "6 min read",
   author: defaultAuthor,
   featured: false,

@@ -15,7 +15,7 @@ export const article15: InsightArticle = {
   topic: "Software Architecture",
   category: "Software Architecture",
   summary: "An objective decision framework comparing off-the-shelf SaaS applications with bespoke custom software. Evaluate total cost of ownership, operational lock-in, intellectual property value, and workflow customization.",
-  status: "draft",
+  status: "published",
   readTime: "7 min read",
   author: defaultAuthor,
   featured: false,

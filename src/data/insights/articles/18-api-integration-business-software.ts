@@ -15,7 +15,7 @@ export const article18: InsightArticle = {
   topic: "Software Architecture",
   category: "Software Architecture",
   summary: "A comprehensive technical checklist for engineering API integrations in commercial software. Learn how to architect authentication handshakes, parse Retry-After headers, manage webhooks securely with HMAC validation, and maintain data consistency across distributed systems.",
-  status: "draft",
+  status: "published",
   readTime: "7 min read",
   author: defaultAuthor,
   featured: false,

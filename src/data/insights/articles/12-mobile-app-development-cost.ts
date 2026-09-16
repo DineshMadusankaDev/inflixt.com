@@ -15,7 +15,7 @@ export const article12: InsightArticle = {
   topic: "Mobile Systems",
   category: "Mobile Systems",
   summary: "A practical guide to understanding mobile application development costs. Avoid generic estimates by evaluating how technical scope, cross-platform architecture, backend microservices, security compliance, and ongoing maintenance shape total investment.",
-  status: "draft",
+  status: "published",
   readTime: "6 min read",
   author: defaultAuthor,
   featured: false,

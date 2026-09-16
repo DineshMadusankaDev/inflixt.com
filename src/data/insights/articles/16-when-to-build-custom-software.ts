@@ -15,7 +15,7 @@ export const article16: InsightArticle = {
   topic: "Software Architecture",
   category: "Software Architecture",
   summary: "A practical diagnostic guide for business owners and operational executives evaluating software investments. Explore seven clear operational symptoms indicating that commercial off-the-shelf tools are actively limiting business growth.",
-  status: "draft",
+  status: "published",
   readTime: "6 min read",
   author: defaultAuthor,
   featured: false,

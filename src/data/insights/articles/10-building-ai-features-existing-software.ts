@@ -15,7 +15,7 @@ export const article10: InsightArticle = {
   topic: "AI & Automation",
   category: "AI & Automation",
   summary: "An engineering blueprint for integrating AI capabilities into established software codebases. Learn how to design Retrieval-Augmented Generation (RAG) with PostgreSQL pgvector, enforce multi-tenant data boundaries, implement semantic caching, and manage API cost budgets.",
-  status: "draft",
+  status: "published",
   readTime: "7 min read",
   author: defaultAuthor,
   featured: false,

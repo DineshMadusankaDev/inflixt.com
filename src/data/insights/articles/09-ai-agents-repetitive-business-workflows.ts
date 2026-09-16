@@ -15,7 +15,7 @@ export const article09: InsightArticle = {
   topic: "AI & Automation",
   category: "AI & Automation",
   summary: "A practical engineering guide to architecting AI agents for business workflows without falling for autonomous agent hype. Learn how function calling, deterministic state machines, and human-in-the-loop safeguards create reliable multi-step automation.",
-  status: "draft",
+  status: "published",
   readTime: "6 min read",
   author: defaultAuthor,
   featured: false,

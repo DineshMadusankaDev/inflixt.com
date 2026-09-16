@@ -15,7 +15,7 @@ export const article13: InsightArticle = {
   topic: "Mobile Systems",
   category: "Mobile Systems",
   summary: "A commercial and financial analysis of Flutter for enterprise and growing business applications. Learn why organizations choose Flutter to unify design systems, accelerate release cycles, and eliminate the overhead of maintaining dual engineering teams.",
-  status: "draft",
+  status: "published",
   readTime: "6 min read",
   author: defaultAuthor,
   featured: false,

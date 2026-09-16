@@ -15,7 +15,7 @@ export const article17: InsightArticle = {
   topic: "Software Architecture",
   category: "Software Architecture",
   summary: "A technical and operational engineering blueprint for automating core business workflows with custom software. Learn how to implement finite state machines, durable message queues with BullMQ, idempotency keys, and dead-letter queues to eliminate manual friction.",
-  status: "draft",
+  status: "published",
   readTime: "7 min read",
   author: defaultAuthor,
   featured: false,

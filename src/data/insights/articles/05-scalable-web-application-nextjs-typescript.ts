@@ -15,7 +15,7 @@ export const article05: InsightArticle = {
   topic: "Web Engineering",
   category: "Web Engineering",
   summary: "An engineering architectural blueprint for structuring production Next.js and TypeScript web applications. Learn how feature-sliced directories, type-safe Server Actions, and connection pooling maintain engineering velocity at scale.",
-  status: "draft",
+  status: "published",
   readTime: "6 min read",
   author: defaultAuthor,
   featured: false,

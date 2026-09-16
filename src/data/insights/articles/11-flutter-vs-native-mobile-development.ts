@@ -15,7 +15,7 @@ export const article11: InsightArticle = {
   topic: "Mobile Systems",
   category: "Mobile Systems",
   summary: "An objective engineering comparison examining when Flutter provides decisive architectural advantages, and where separate native Swift and Kotlin codebases remain preferable. Evaluate rendering pipelines, Impeller GPU compilation, hardware interop, and maintenance overhead.",
-  status: "draft",
+  status: "published",
   readTime: "6 min read",
   author: defaultAuthor,
   featured: false,

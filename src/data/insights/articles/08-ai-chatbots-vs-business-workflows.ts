@@ -15,7 +15,7 @@ export const article08: InsightArticle = {
   topic: "AI & Automation",
   category: "AI & Automation",
   summary: "A technical and strategic breakdown comparing conversational AI chatbots with automated backend AI workflows. Understand architectural differences, error recovery models, and where real business ROI is generated.",
-  status: "draft",
+  status: "published",
   readTime: "6 min read",
   author: defaultAuthor,
   featured: false,
