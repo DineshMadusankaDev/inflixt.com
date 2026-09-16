@@ -20,7 +20,7 @@ export function ChatLauncher({ isOpen, onClick, unreadCount = 0 }: ChatLauncherP
       aria-label={isOpen ? "Close Inflixt AI chat" : "Open Inflixt AI consultation chat"}
       title="Talk to Inflixt AI"
       className={cn(
-        "group relative flex items-center gap-2.5 px-4 py-3 rounded-full cursor-pointer transition-all duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00F5FF]",
+        "group relative flex items-center gap-2 sm:gap-2.5 px-3 py-2 sm:px-4 sm:py-3 rounded-full cursor-pointer transition-all duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00F5FF]",
         "bg-[#080512]/90 backdrop-blur-md border border-[#00F5FF]/40 text-white shadow-[0_4px_25px_rgba(0,245,255,0.25)]",
         "hover:border-[#00F5FF] hover:shadow-[0_0_30px_rgba(0,245,255,0.45)] hover:scale-[1.03] active:scale-[0.98]",
         "motion-reduce:transform-none"
@@ -33,13 +33,13 @@ export function ChatLauncher({ isOpen, onClick, unreadCount = 0 }: ChatLauncherP
       />
 
       {/* Online indicator dot */}
-      <span className="relative flex h-2.5 w-2.5">
+      <span className="relative flex h-2 sm:h-2.5 w-2 sm:w-2.5">
         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00F5FF] opacity-75 motion-reduce:hidden" />
-        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#00F5FF]" />
+        <span className="relative inline-flex rounded-full h-2 sm:h-2.5 w-2 sm:w-2.5 bg-[#00F5FF]" />
       </span>
 
       {/* Sparkles Icon */}
-      <Sparkles className="w-4 h-4 text-[#00F5FF] group-hover:rotate-12 transition-transform duration-300 motion-reduce:transform-none" />
+      <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#00F5FF] group-hover:rotate-12 transition-transform duration-300 motion-reduce:transform-none" />
 
       {/* Text label */}
       <span className="font-heading font-semibold text-xs sm:text-sm tracking-wide bg-gradient-to-r from-white via-[#E7E5EE] to-[#00F5FF] bg-clip-text text-transparent">

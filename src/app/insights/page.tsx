@@ -96,9 +96,7 @@ export default function InsightsPage() {
         )}
 
         {/* 03 & 04. Topic Filter & Latest Insights Feed */}
-        <ScrollReveal>
-          <InsightsFeed articles={articles} />
-        </ScrollReveal>
+        <InsightsFeed articles={articles} />
 
         {/* 05. Why We Write: Editorial Manifesto */}
         <WhyWeWrite />

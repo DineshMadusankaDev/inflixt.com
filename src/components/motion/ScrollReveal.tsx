@@ -19,6 +19,8 @@ interface ScrollRevealProps {
   distance?: number;
   className?: string;
   style?: CSSProperties;
+  threshold?: number;
+  rootMargin?: string;
 }
 
 export function ScrollReveal({
@@ -30,6 +32,8 @@ export function ScrollReveal({
   distance = 20,
   className,
   style,
+  threshold = 0,
+  rootMargin = "0px 0px -20px 0px",
 }: ScrollRevealProps) {
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef<HTMLElement | null>(null);
@@ -44,6 +48,21 @@ export function ScrollReveal({
       return () => cancelAnimationFrame(raf);
     }
 
+    if (typeof IntersectionObserver === "undefined") {
+      const raf = requestAnimationFrame(() => setIsVisible(true));
+      return () => cancelAnimationFrame(raf);
+    }
+
+    const currentEl = elementRef.current;
+    if (currentEl) {
+      // Immediate check if element is already inside the viewport on mount
+      const rect = currentEl.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        const raf = requestAnimationFrame(() => setIsVisible(true));
+        return () => cancelAnimationFrame(raf);
+      }
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -52,12 +71,11 @@ export function ScrollReveal({
         }
       },
       {
-        threshold: 0.1,
-        rootMargin: "0px 0px -40px 0px",
+        threshold,
+        rootMargin,
       }
     );
 
-    const currentEl = elementRef.current;
     if (currentEl) {
       observer.observe(currentEl);
     }
@@ -68,7 +86,7 @@ export function ScrollReveal({
       }
       observer.disconnect();
     };
-  }, []);
+  }, [threshold, rootMargin]);
 
   const getTransform = () => {
     if (isVisible) return "translate3d(0, 0, 0)";

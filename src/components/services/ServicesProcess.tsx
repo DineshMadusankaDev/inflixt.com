@@ -44,7 +44,7 @@ export function ServicesProcess() {
   ];
 
   return (
-    <section id="process" className="py-24 sm:py-32 relative scroll-mt-20">
+    <section id="process" className="py-24 sm:py-32 relative overflow-hidden scroll-mt-20">
       <Container>
         <ScrollReveal>
           <SectionHeader

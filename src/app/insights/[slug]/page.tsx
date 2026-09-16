@@ -159,97 +159,95 @@ export default async function InsightDetailPage({
       <div className="absolute top-1/2 right-10 w-[500px] h-[500px] bg-[#8B2CFF]/5 rounded-full blur-[140px] pointer-events-none animate-ambient-purple" />
 
       <Container>
-        <ScrollReveal>
-          {/* Main 2-column grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-            {/* Left/Prose Content Column */}
-            <article className="lg:col-span-8">
-              <ArticleHeader article={article} />
+        {/* Main 2-column grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          {/* Left/Prose Content Column */}
+          <article className="lg:col-span-8">
+            <ArticleHeader article={article} />
 
-              {/* Status Notice if Draft */}
-              {isDraft && (
-                <div className="my-6 p-4 rounded-xl bg-[#8B2CFF]/10 border border-[#8B2CFF]/30 text-xs font-mono text-purple-200 flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-[#8B2CFF] animate-pulse" />
-                    <span>EDITORIAL DRAFT — IN REVIEW (ROBOTS: NOINDEX)</span>
-                  </div>
-                  <span className="text-[#9290A3] hidden sm:inline">Inflixt SEO Content Program</span>
+            {/* Status Notice if Draft */}
+            {isDraft && (
+              <div className="my-6 p-4 rounded-xl bg-[#8B2CFF]/10 border border-[#8B2CFF]/30 text-xs font-mono text-purple-200 flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-[#8B2CFF] animate-pulse" />
+                  <span>EDITORIAL DRAFT — IN REVIEW (ROBOTS: NOINDEX)</span>
                 </div>
-              )}
-
-              {/* Status Notice if Upcoming */}
-              {isUpcoming && (
-                <div className="my-8 p-6 sm:p-8 rounded-2xl bg-[#080512] border border-white/10 relative overflow-hidden">
-                  <div className="flex items-center gap-2 text-xs font-mono text-[#00F5FF] uppercase tracking-wider mb-2">
-                    <Clock className="w-4 h-4" />
-                    <span>Editorial Status: In Technical Review</span>
-                  </div>
-                  <h2 className="text-lg font-bold text-white mb-2">
-                    Upcoming Architectural Perspective
-                  </h2>
-                  <p className="text-sm text-[#9290A3] leading-relaxed mb-6">
-                    This perspective is currently undergoing engineering review and code benchmarking. The complete technical analysis, verified code snippets, and production trade-offs will be released in the upcoming editorial cycle.
-                  </p>
-
-                  {/* Planned Architectural Topics */}
-                  {article.tableOfContents && article.tableOfContents.length > 0 && (
-                    <div className="pt-4 border-t border-white/10">
-                      <div className="text-xs font-mono text-[#9290A3] uppercase tracking-wider mb-3 flex items-center gap-2">
-                        <FileCode2 className="w-3.5 h-3.5 text-[#00F5FF]" />
-                        <span>Planned Architectural Scope</span>
-                      </div>
-                      <div className="space-y-2.5">
-                        {article.tableOfContents.map((item) => (
-                          <div
-                            key={item.id}
-                            className="text-xs sm:text-sm text-[#E7E5EE] flex items-start gap-2.5"
-                          >
-                            <span className="text-[#00F5FF] font-mono shrink-0">→</span>
-                            <span>{item.title}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
-              )}
-
-              {/* Render Blocks if present */}
-              {article.blocks && article.blocks.length > 0 && (
-                <ArticleContentRenderer blocks={article.blocks} />
-              )}
-
-              {/* Contextual Service Bridge */}
-              <ArticleServiceBridge
-                alignedService={article.alignedService}
-                projectReference={article.projectReference}
-              />
-
-              {/* Bottom Navigation */}
-              <div className="pt-8 border-t border-white/10 flex items-center justify-between">
-                <Link
-                  href="/insights"
-                  className="text-xs sm:text-sm font-mono text-[#9290A3] hover:text-[#00F5FF] transition-colors inline-flex items-center gap-2 group"
-                >
-                  <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
-                  <span>Back to All Perspectives</span>
-                </Link>
-
-                <Link
-                  href="/contact"
-                  className="text-xs sm:text-sm font-mono text-[#00F5FF] hover:underline"
-                >
-                  Discuss This Architecture →
-                </Link>
+                <span className="text-[#9290A3] hidden sm:inline">Inflixt SEO Content Program</span>
               </div>
-            </article>
+            )}
 
-            {/* Right Sticky Sidebar */}
-            <div className="lg:col-span-4 lg:sticky lg:top-28">
-              <ArticleSidebar article={article} />
+            {/* Status Notice if Upcoming */}
+            {isUpcoming && (
+              <div className="my-8 p-6 sm:p-8 rounded-2xl bg-[#080512] border border-white/10 relative overflow-hidden">
+                <div className="flex items-center gap-2 text-xs font-mono text-[#00F5FF] uppercase tracking-wider mb-2">
+                  <Clock className="w-4 h-4" />
+                  <span>Editorial Status: In Technical Review</span>
+                </div>
+                <h2 className="text-lg font-bold text-white mb-2">
+                  Upcoming Architectural Perspective
+                </h2>
+                <p className="text-sm text-[#9290A3] leading-relaxed mb-6">
+                  This perspective is currently undergoing engineering review and code benchmarking. The complete technical analysis, verified code snippets, and production trade-offs will be released in the upcoming editorial cycle.
+                </p>
+
+                {/* Planned Architectural Topics */}
+                {article.tableOfContents && article.tableOfContents.length > 0 && (
+                  <div className="pt-4 border-t border-white/10">
+                    <div className="text-xs font-mono text-[#9290A3] uppercase tracking-wider mb-3 flex items-center gap-2">
+                      <FileCode2 className="w-3.5 h-3.5 text-[#00F5FF]" />
+                      <span>Planned Architectural Scope</span>
+                    </div>
+                    <div className="space-y-2.5">
+                      {article.tableOfContents.map((item) => (
+                        <div
+                          key={item.id}
+                          className="text-xs sm:text-sm text-[#E7E5EE] flex items-start gap-2.5"
+                        >
+                          <span className="text-[#00F5FF] font-mono shrink-0">→</span>
+                          <span>{item.title}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* Render Blocks if present */}
+            {article.blocks && article.blocks.length > 0 && (
+              <ArticleContentRenderer blocks={article.blocks} />
+            )}
+
+            {/* Contextual Service Bridge */}
+            <ArticleServiceBridge
+              alignedService={article.alignedService}
+              projectReference={article.projectReference}
+            />
+
+            {/* Bottom Navigation */}
+            <div className="pt-8 border-t border-white/10 flex items-center justify-between">
+              <Link
+                href="/insights"
+                className="text-xs sm:text-sm font-mono text-[#9290A3] hover:text-[#00F5FF] transition-colors inline-flex items-center gap-2 group"
+              >
+                <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
+                <span>Back to All Perspectives</span>
+              </Link>
+
+              <Link
+                href="/contact"
+                className="text-xs sm:text-sm font-mono text-[#00F5FF] hover:underline"
+              >
+                Discuss This Architecture →
+              </Link>
             </div>
+          </article>
+
+          {/* Right Sticky Sidebar */}
+          <div className="lg:col-span-4 lg:sticky lg:top-28">
+            <ArticleSidebar article={article} />
           </div>
-        </ScrollReveal>
+        </div>
 
         {/* Related Insights Grid */}
         {relatedArticles.length > 0 && (

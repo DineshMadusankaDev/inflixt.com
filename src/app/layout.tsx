@@ -127,7 +127,7 @@ export default function RootLayout({
         <Header />
 
         {/* Main Page Content */}
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 w-full max-w-full overflow-x-clip">{children}</main>
 
         {/* 11. Master Footer */}
         <Footer />

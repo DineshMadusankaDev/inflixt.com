@@ -111,18 +111,20 @@ export function ChatWindow({
       aria-label="Inflixt AI Consultation"
       className={cn(
         "fixed z-50 flex flex-col overflow-hidden transition-all duration-300 ease-out",
-        // Desktop positioning & dimensions
-        "bottom-24 right-4 sm:right-6 w-[calc(100vw-2rem)] sm:w-[420px] md:w-[440px] h-[600px] max-h-[calc(100vh-8rem)]",
         "rounded-2xl bg-[#080512]/95 backdrop-blur-2xl border border-white/15",
         "shadow-[0_20px_60px_rgba(0,0,0,0.85),0_0_35px_rgba(0,245,255,0.12)]",
-        // Mobile near-full viewport adaptation
-        "max-sm:bottom-2 max-sm:right-2 max-sm:left-2 max-sm:w-[calc(100vw-1rem)] max-sm:h-[calc(100vh-2rem)] max-sm:max-h-[calc(100vh-1rem)]"
+        // Mobile responsive constraints (uses dvh and safe-area insets, maintains header clearance)
+        "max-sm:fixed max-sm:inset-x-3 max-sm:bottom-[calc(0.75rem+env(safe-area-inset-bottom,0px))] max-sm:w-auto max-sm:max-w-none",
+        "max-sm:h-[min(560px,calc(100dvh-5.5rem-env(safe-area-inset-top,0px)-env(safe-area-inset-bottom,0px)))]",
+        "max-sm:max-h-[calc(100dvh-5.5rem-env(safe-area-inset-top,0px)-env(safe-area-inset-bottom,0px))]",
+        // Desktop positioning & dimensions (preserved)
+        "sm:bottom-24 sm:right-6 sm:w-[420px] md:w-[440px] sm:h-[600px] sm:max-h-[calc(100vh-8rem)]"
       )}
     >
       {/* 1. Header */}
-      <div className="flex items-center justify-between px-4 py-3.5 border-b border-white/10 bg-black/40 shrink-0">
+      <div className="flex items-center justify-between px-3.5 sm:px-4 py-3 sm:py-3.5 border-b border-white/10 bg-black/40 shrink-0">
         <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#00F5FF]/20 via-[#8B2CFF]/20 to-[#00F5FF]/10 border border-[#00F5FF]/40 flex items-center justify-center text-[#00F5FF] shadow-[0_0_15px_rgba(0,245,255,0.2)]">
+          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#00F5FF]/20 via-[#8B2CFF]/20 to-[#00F5FF]/10 border border-[#00F5FF]/40 flex items-center justify-center text-[#00F5FF] shadow-[0_0_15px_rgba(0,245,255,0.2)] shrink-0">
             <Sparkles className="w-4 h-4" />
           </div>
           <div>
@@ -167,7 +169,7 @@ export function ChatWindow({
       <div
         ref={scrollContainerRef}
         onScroll={handleScroll}
-        className="flex-1 overflow-y-auto p-4 space-y-4 scroll-smooth focus:outline-none"
+        className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-3.5 sm:space-y-4 scroll-smooth focus:outline-none"
         tabIndex={0}
       >
         {/* Welcome message if conversation is empty */}
@@ -177,7 +179,7 @@ export function ChatWindow({
               <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[#00F5FF]/30 to-[#8B2CFF]/30 border border-[#00F5FF]/50 text-[#00F5FF] flex items-center justify-center shrink-0 mt-0.5">
                 <Sparkles className="w-3.5 h-3.5" />
               </div>
-              <div className="max-w-[85%] rounded-2xl rounded-tl-none p-3.5 bg-[#0B0717]/90 border border-white/10 text-[#E7E5EE] text-sm space-y-2">
+              <div className="max-w-[88%] sm:max-w-[85%] rounded-2xl rounded-tl-none p-3 sm:p-3.5 bg-[#0B0717]/90 border border-white/10 text-[#E7E5EE] text-sm space-y-2">
                 <p>Hi, I&apos;m Inflixt AI 👋</p>
                 <p className="text-xs text-[#9290A3] leading-relaxed">
                   I can help you explore our services, understand project pricing, review our work, or figure out the best way to build your idea.
@@ -189,7 +191,7 @@ export function ChatWindow({
             </div>
 
             {/* Quick Prompt Chips */}
-            <div className="pt-2 pl-10 space-y-1.5">
+            <div className="pt-2 pl-2 sm:pl-10 space-y-1.5">
               <span className="text-[10px] font-mono uppercase tracking-wider text-[#9290A3] block">
                 SUGGESTED QUESTIONS
               </span>
@@ -199,7 +201,7 @@ export function ChatWindow({
                     key={i}
                     type="button"
                     onClick={() => onSendMessage(prompt)}
-                    className="text-xs text-left px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 hover:border-[#00F5FF]/50 hover:bg-[#00F5FF]/10 hover:text-white text-[#E7E5EE] transition-all cursor-pointer"
+                    className="text-xs text-left px-2.5 py-1.5 sm:px-3 rounded-lg bg-white/5 border border-white/10 hover:border-[#00F5FF]/50 hover:bg-[#00F5FF]/10 hover:text-white text-[#E7E5EE] transition-all cursor-pointer"
                   >
                     {prompt}
                   </button>

@@ -21,7 +21,7 @@ export function ServicesShowcase() {
   const seoService = servicesData[5];
 
   return (
-    <section id="what-we-build" className="py-24 sm:py-32 relative scroll-mt-20">
+    <section id="what-we-build" className="py-24 sm:py-32 relative overflow-hidden scroll-mt-20">
       {/* Background ambient lighting */}
       <div
         className="absolute top-1/4 left-1/4 w-[450px] h-[450px] bg-[#00F5FF]/5 rounded-full blur-[140px] pointer-events-none animate-ambient-cyan"

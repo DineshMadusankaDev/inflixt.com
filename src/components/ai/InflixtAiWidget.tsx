@@ -368,8 +368,8 @@ export function InflixtAiWidget() {
 
   return (
     <div className="relative pointer-events-auto">
-      {/* Floating launcher */}
-      <div className="fixed bottom-6 right-4 sm:right-6 z-40">
+      {/* Floating launcher with safe-area support */}
+      <div className="fixed bottom-[calc(1rem+env(safe-area-inset-bottom,0px))] right-3 sm:bottom-6 sm:right-6 z-40">
         <ChatLauncher isOpen={isOpen} onClick={handleToggle} />
       </div>
 

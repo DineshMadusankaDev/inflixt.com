@@ -24,12 +24,16 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  if (prevPathname !== pathname) {
+    setPrevPathname(pathname);
+    setMobileMenuOpen(false);
+  }
 
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        "fixed top-0 left-0 right-0 w-full max-w-full z-50 transition-all duration-300",
         scrolled
           ? "bg-[#05030D]/85 backdrop-blur-xl border-b border-white/10 py-3.5 shadow-2xl"
           : "bg-transparent py-5"
@@ -40,7 +44,7 @@ export function Header() {
           {/* Brand Anchor */}
           <Link
             href="/"
-            className="group flex items-center gap-3 transition-opacity hover:opacity-90"
+            className="group flex items-center gap-3 transition-opacity hover:opacity-90 shrink-0"
             aria-label="Inflixt Global"
           >
             <div className="relative flex items-center">
@@ -66,7 +70,7 @@ export function Header() {
                   className={cn(
                     "text-sm font-medium px-4 py-1.5 rounded-full transition-all duration-200",
                     isActive
-                      ? "text-white bg-white/10 text-glow-cyan shadow-[0_0_15px_rgba(0,245,255,0.15)]"
+                      ? "text-white bg-white/10 [text-shadow:0_0_16px_rgba(0,245,255,0.4)] shadow-[0_0_15px_rgba(0,245,255,0.15)]"
                       : "text-[#9290A3] hover:text-white hover:bg-white/5"
                   )}
                 >
@@ -92,7 +96,7 @@ export function Header() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 rounded-xl text-[#E7E5EE] hover:text-white hover:bg-white/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00F5FF]"
+            className="lg:hidden p-2 rounded-xl text-[#E7E5EE] hover:text-white hover:bg-white/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00F5FF] shrink-0"
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileMenuOpen}
           >
