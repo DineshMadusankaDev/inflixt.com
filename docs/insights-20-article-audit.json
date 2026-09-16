@@ -1,0 +1,467 @@
+{
+  "meta": {
+    "auditDate": "September 2026",
+    "auditedEntity": "Inflixt Global PVT LTD",
+    "totalArticles": 20,
+    "summary": {
+      "ready": 0,
+      "minorEdits": 15,
+      "majorEdits": 5,
+      "rewrite": 0,
+      "reconsider": 0
+    }
+  },
+  "articles": [
+    {
+      "index": 1,
+      "slug": "nextjs-app-router-seo-guide",
+      "title": "Next.js App Router SEO: A Practical Guide to Metadata, Sitemaps, and Structured Data",
+      "primaryTopic": "Next.js App Router SEO",
+      "searchIntent": "Informational / Implementation Guide",
+      "wordCount": 668,
+      "serviceBridge": "ai-web-development",
+      "currentProject": "fair-comment",
+      "caseStudyDecision": "KEEP",
+      "overallScore": 8.8,
+      "verdict": "EDIT",
+      "sources": [
+        "Next.js Official Documentation: Metadata Files and APIs (nextjs.org/docs/app/building-your-application/optimizing/metadata)",
+        "Google Search Central: Structured Data General Guidelines",
+        "Schema.org Core Vocabulary Specification"
+      ],
+      "relatedSlugs": [
+        "nextjs-server-vs-client-components",
+        "improve-core-web-vitals-nextjs",
+        "technical-seo-modern-web-applications-checklist"
+      ]
+    },
+    {
+      "index": 2,
+      "slug": "nextjs-server-vs-client-components",
+      "title": "React Server Components vs. Client Components: Boundary Strategy for Performance and SEO",
+      "primaryTopic": "Next.js Server Components vs Client Components",
+      "searchIntent": "Informational / Technical Decision",
+      "wordCount": 704,
+      "serviceBridge": "ai-web-development",
+      "currentProject": "fair-comment",
+      "caseStudyDecision": "KEEP",
+      "overallScore": 8.8,
+      "verdict": "EDIT",
+      "sources": [
+        "React Official Documentation: Server Components Overview (react.dev)",
+        "Next.js Official Documentation: Server and Client Composition Patterns (nextjs.org/docs/app/building-your-application/rendering)"
+      ],
+      "relatedSlugs": [
+        "nextjs-app-router-seo-guide",
+        "improve-core-web-vitals-nextjs",
+        "scalable-web-application-nextjs-typescript"
+      ]
+    },
+    {
+      "index": 3,
+      "slug": "improve-core-web-vitals-nextjs",
+      "title": "How to Improve Core Web Vitals in Next.js: Practical Engineering for LCP, INP, and CLS",
+      "primaryTopic": "Core Web Vitals Next.js",
+      "searchIntent": "Informational / Practical Implementation",
+      "wordCount": 668,
+      "serviceBridge": "ai-web-development",
+      "currentProject": "studio-2020",
+      "caseStudyDecision": "KEEP",
+      "overallScore": 8.8,
+      "verdict": "EDIT",
+      "sources": [
+        "Google Search Central & Web.dev: Core Web Vitals Guidance (web.dev/explore/metrics)",
+        "Next.js Official Documentation: Image Optimization (nextjs.org/docs/app/building-your-application/optimizing/images)",
+        "Next.js Official Documentation: Font Optimization (nextjs.org/docs/app/building-your-application/optimizing/fonts)"
+      ],
+      "relatedSlugs": [
+        "nextjs-app-router-seo-guide",
+        "nextjs-server-vs-client-components",
+        "technical-seo-modern-web-applications-checklist"
+      ]
+    },
+    {
+      "index": 4,
+      "slug": "nextjs-vs-wordpress-business-comparison",
+      "title": "Next.js vs. WordPress: An Architectural and Business Comparison for 2026",
+      "primaryTopic": "Next.js vs WordPress",
+      "searchIntent": "Commercial Investigation / Comparison",
+      "wordCount": 770,
+      "serviceBridge": "ai-web-development",
+      "currentProject": "fair-comment",
+      "caseStudyDecision": "KEEP",
+      "overallScore": 8.9,
+      "verdict": "KEEP",
+      "sources": [
+        "WordPress Core Documentation (wordpress.org)",
+        "Next.js Official Documentation (nextjs.org)",
+        "W3Techs Web Technology Surveys (Usage statistics of content management systems)"
+      ],
+      "relatedSlugs": [
+        "nextjs-app-router-seo-guide",
+        "nextjs-server-vs-client-components",
+        "headless-ecommerce-growing-business-guide"
+      ]
+    },
+    {
+      "index": 5,
+      "slug": "scalable-web-application-nextjs-typescript",
+      "title": "Building Scalable Web Applications with Next.js and TypeScript: Architecture Patterns",
+      "primaryTopic": "Scalable Next.js TypeScript architecture",
+      "searchIntent": "Informational / Technical Implementation",
+      "wordCount": 498,
+      "serviceBridge": "custom-software",
+      "currentProject": "inflixt-global",
+      "caseStudyDecision": "REMOVE",
+      "overallScore": 8.3,
+      "verdict": "EDIT",
+      "sources": [
+        "TypeScript Official Handbook (typescriptlang.org)",
+        "Next.js Official Documentation: Project Organization and File Colocation (nextjs.org/docs/app/building-your-application/routing/colocation)",
+        "Prisma / Drizzle ORM Serverless Connection Guides"
+      ],
+      "relatedSlugs": [
+        "nextjs-server-vs-client-components",
+        "nextjs-app-router-seo-guide",
+        "api-integration-business-software-checklist"
+      ]
+    },
+    {
+      "index": 6,
+      "slug": "practical-ai-integration-business-software",
+      "title": "Practical AI Integration for Business Software: Where Should Companies Start?",
+      "primaryTopic": "Practical AI integration for business",
+      "searchIntent": "Informational / Commercial Investigation",
+      "wordCount": 514,
+      "serviceBridge": "ai-automation",
+      "currentProject": "inflixt-global",
+      "caseStudyDecision": "REMOVE",
+      "overallScore": 8.7,
+      "verdict": "EDIT",
+      "sources": [
+        "Google Cloud Vertex AI & Gemini Documentation",
+        "OpenAI API Documentation: Structured Outputs and JSON Schema",
+        "Harvard Business Review: Where Companies Are Finding Real AI Value"
+      ],
+      "relatedSlugs": [
+        "ai-chatbots-vs-business-workflows",
+        "ai-automation-small-business",
+        "building-ai-features-existing-software"
+      ]
+    },
+    {
+      "index": 7,
+      "slug": "ai-automation-small-business",
+      "title": "AI Automation for Small Businesses: Which Processes Are Truly Worth Automating First?",
+      "primaryTopic": "AI automation for small business",
+      "searchIntent": "Informational / Commercial Investigation",
+      "wordCount": 568,
+      "serviceBridge": "ai-automation",
+      "currentProject": "inflixt-global",
+      "caseStudyDecision": "REMOVE",
+      "overallScore": 8.2,
+      "verdict": "EDIT",
+      "sources": [
+        "Harvard Business Review: Pragmatic AI in Small and Medium Enterprises",
+        "Google Gemini Developer Documentation on Multimodal Document Extraction"
+      ],
+      "relatedSlugs": [
+        "practical-ai-integration-business-software",
+        "ai-chatbots-vs-business-workflows",
+        "when-to-build-custom-software-signs"
+      ]
+    },
+    {
+      "index": 8,
+      "slug": "ai-chatbots-vs-business-workflows",
+      "title": "AI Chatbots vs. AI-Powered Business Workflows: Understanding the Fundamental Difference",
+      "primaryTopic": "AI chatbots vs AI workflows",
+      "searchIntent": "Informational / Comparison",
+      "wordCount": 531,
+      "serviceBridge": "ai-automation",
+      "currentProject": "inflixt-global",
+      "caseStudyDecision": "REMOVE",
+      "overallScore": 8.7,
+      "verdict": "EDIT",
+      "sources": [
+        "Gartner: Emerging Technologies and Architecture of Agentic AI",
+        "Forrester Research: The Total Economic Impact of Pragmatic Workflow Automation"
+      ],
+      "relatedSlugs": [
+        "practical-ai-integration-business-software",
+        "ai-agents-repetitive-business-workflows",
+        "ai-automation-small-business"
+      ]
+    },
+    {
+      "index": 9,
+      "slug": "ai-agents-repetitive-business-workflows",
+      "title": "How AI Agents Automate Repetitive Business Workflows: Architecture, Tools, and Human Oversight",
+      "primaryTopic": "AI agents for business workflow automation",
+      "searchIntent": "Informational / Emerging Technology Architecture",
+      "wordCount": 584,
+      "serviceBridge": "ai-automation",
+      "currentProject": "inflixt-global",
+      "caseStudyDecision": "REMOVE",
+      "overallScore": 8.7,
+      "verdict": "EDIT",
+      "sources": [
+        "Anthropic Research: Building Effective Agents and Tool Use Architecture",
+        "Google DeepMind: Agentic Workflow Foundations and Function Calling Protocols",
+        "OWASP Top 10 for Large Language Model Applications: Excessive Agency Risk"
+      ],
+      "relatedSlugs": [
+        "practical-ai-integration-business-software",
+        "ai-chatbots-vs-business-workflows",
+        "building-ai-features-existing-software"
+      ]
+    },
+    {
+      "index": 10,
+      "slug": "building-ai-features-existing-software",
+      "title": "Building AI Features into Existing Software: Architecture, APIs, and Data Considerations",
+      "primaryTopic": "Adding AI features to existing software",
+      "searchIntent": "Technical / Commercial Investigation",
+      "wordCount": 484,
+      "serviceBridge": "custom-software",
+      "currentProject": "inflixt-global",
+      "caseStudyDecision": "REMOVE",
+      "overallScore": 7.9,
+      "verdict": "MAJOR EDIT",
+      "sources": [
+        "PostgreSQL pgvector Extension Documentation (github.com/pgvector/pgvector)",
+        "OWASP Top 10 for LLM Applications: Training Data Poisoning & Sensitive Information Disclosure",
+        "Google Cloud Vertex AI Vector Search Guide"
+      ],
+      "relatedSlugs": [
+        "practical-ai-integration-business-software",
+        "ai-agents-repetitive-business-workflows",
+        "api-integration-business-software-checklist"
+      ]
+    },
+    {
+      "index": 11,
+      "slug": "flutter-vs-native-mobile-development",
+      "title": "Flutter vs. Native Mobile Architecture: How to Choose the Right Approach in 2026",
+      "primaryTopic": "Flutter vs native app development",
+      "searchIntent": "Comparison / Commercial Investigation",
+      "wordCount": 687,
+      "serviceBridge": "mobile-app-development",
+      "currentProject": "studio-2020",
+      "caseStudyDecision": "REMOVE",
+      "overallScore": 8.2,
+      "verdict": "MAJOR EDIT",
+      "sources": [
+        "Flutter Official Documentation: Architecture and Impeller Rendering (docs.flutter.dev)",
+        "Apple Developer Documentation: Swift and SwiftUI Architecture",
+        "Android Developers Guide: Modern Android App Architecture"
+      ],
+      "relatedSlugs": [
+        "mobile-app-development-cost",
+        "flutter-app-development-business",
+        "mobile-app-architecture-decisions"
+      ]
+    },
+    {
+      "index": 12,
+      "slug": "mobile-app-development-cost",
+      "title": "How Much Does It Cost to Build a Mobile App in 2026? Pricing Factors, Timelines, and Budget Drivers",
+      "primaryTopic": "Mobile app development cost",
+      "searchIntent": "Commercial Investigation",
+      "wordCount": 696,
+      "serviceBridge": "mobile-app-development",
+      "currentProject": "inflixt-global",
+      "caseStudyDecision": "REMOVE",
+      "overallScore": 8.7,
+      "verdict": "EDIT",
+      "sources": [
+        "Clutch Global Mobile App Development Industry Benchmarks (clutch.co)",
+        "Apple Developer Program Fee Schedules & Guidelines",
+        "Google Play Developer Distribution Agreement"
+      ],
+      "relatedSlugs": [
+        "flutter-vs-native-mobile-development",
+        "flutter-app-development-business",
+        "mobile-app-architecture-decisions"
+      ]
+    },
+    {
+      "index": 13,
+      "slug": "flutter-app-development-business",
+      "title": "Flutter App Development for Business: When Does Cross-Platform Make Strategic Sense?",
+      "primaryTopic": "Flutter for business apps",
+      "searchIntent": "Commercial Investigation",
+      "wordCount": 529,
+      "serviceBridge": "mobile-app-development",
+      "currentProject": "studio-2020",
+      "caseStudyDecision": "REMOVE",
+      "overallScore": 7.8,
+      "verdict": "MAJOR EDIT",
+      "sources": [
+        "Google Flutter Enterprise Showcase and Case Studies (flutter.dev/showcase)",
+        "Stack Overflow Developer Survey: Most Loved Cross-Platform Frameworks"
+      ],
+      "relatedSlugs": [
+        "flutter-vs-native-mobile-development",
+        "mobile-app-development-cost",
+        "mobile-app-architecture-decisions"
+      ]
+    },
+    {
+      "index": 14,
+      "slug": "mobile-app-architecture-decisions",
+      "title": "Mobile App Architecture: Critical Decisions Businesses Must Make Before Writing Code",
+      "primaryTopic": "Mobile app architecture decisions",
+      "searchIntent": "Informational / Pre-Project Planning",
+      "wordCount": 594,
+      "serviceBridge": "mobile-app-development",
+      "currentProject": "inflixt-global",
+      "caseStudyDecision": "REMOVE",
+      "overallScore": 8.2,
+      "verdict": "EDIT",
+      "sources": [
+        "Google Developers: Guide to Mobile App Architecture (developer.android.com/topic/architecture)",
+        "Martin Fowler: Software Architecture Patterns and Offline Sync Models"
+      ],
+      "relatedSlugs": [
+        "flutter-vs-native-mobile-development",
+        "mobile-app-development-cost",
+        "api-integration-business-software-checklist"
+      ]
+    },
+    {
+      "index": 15,
+      "slug": "custom-software-vs-off-the-shelf-saas",
+      "title": "Custom Software vs. Off-the-Shelf SaaS: Which Is Right for Your Business?",
+      "primaryTopic": "Custom software vs off-the-shelf software",
+      "searchIntent": "Commercial Investigation / Comparison",
+      "wordCount": 555,
+      "serviceBridge": "custom-software",
+      "currentProject": "fair-comment",
+      "caseStudyDecision": "REMOVE",
+      "overallScore": 8.6,
+      "verdict": "EDIT",
+      "sources": [
+        "MIT Sloan Management Review: When to Build and When to Buy Software",
+        "Gartner Research: Software Portfolio Rationalization and SaaS Governance"
+      ],
+      "relatedSlugs": [
+        "when-to-build-custom-software-signs",
+        "automate-business-workflows-custom-software",
+        "api-integration-business-software-checklist"
+      ]
+    },
+    {
+      "index": 16,
+      "slug": "when-to-build-custom-software-signs",
+      "title": "When Should a Business Build Custom Software? 7 Operational Signs It Is Time",
+      "primaryTopic": "When to build custom software",
+      "searchIntent": "Commercial Investigation",
+      "wordCount": 539,
+      "serviceBridge": "custom-software",
+      "currentProject": "inflixt-global",
+      "caseStudyDecision": "REMOVE",
+      "overallScore": 8.6,
+      "verdict": "EDIT",
+      "sources": [
+        "Harvard Business Review: The Operational Scaling Plateau",
+        "McKinsey & Company: Modernizing Digital Operations in Mid-Market Enterprises"
+      ],
+      "relatedSlugs": [
+        "custom-software-vs-off-the-shelf-saas",
+        "automate-business-workflows-custom-software",
+        "api-integration-business-software-checklist"
+      ]
+    },
+    {
+      "index": 17,
+      "slug": "automate-business-workflows-custom-software",
+      "title": "How to Automate Business Workflows with Custom Software: An Architectural Blueprint",
+      "primaryTopic": "Automate business workflows with custom software",
+      "searchIntent": "Informational / Commercial Investigation",
+      "wordCount": 395,
+      "serviceBridge": "custom-software",
+      "currentProject": "inflixt-global",
+      "caseStudyDecision": "REMOVE",
+      "overallScore": 7.7,
+      "verdict": "MAJOR EDIT",
+      "sources": [
+        "Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions (Gregor Hohpe)",
+        "Martin Fowler: Event-Driven Architecture and Asynchronous Messaging Patterns"
+      ],
+      "relatedSlugs": [
+        "when-to-build-custom-software-signs",
+        "api-integration-business-software-checklist",
+        "custom-software-vs-off-the-shelf-saas"
+      ]
+    },
+    {
+      "index": 18,
+      "slug": "api-integration-business-software-checklist",
+      "title": "API Integration for Business Software: Architecture, Security, and Pre-Development Checklist",
+      "primaryTopic": "API integration for business software",
+      "searchIntent": "Informational / Pre-Project Implementation",
+      "wordCount": 465,
+      "serviceBridge": "custom-software",
+      "currentProject": "fair-comment",
+      "caseStudyDecision": "REMOVE",
+      "overallScore": 8.3,
+      "verdict": "EDIT",
+      "sources": [
+        "IETF RFC 6749: The OAuth 2.0 Authorization Framework",
+        "OWASP API Security Top 10 (owasp.org/www-project-api-security)",
+        "Stripe Engineering: Designing Robust Webhook Systems with Idempotency"
+      ],
+      "relatedSlugs": [
+        "automate-business-workflows-custom-software",
+        "custom-software-vs-off-the-shelf-saas",
+        "scalable-web-application-nextjs-typescript"
+      ]
+    },
+    {
+      "index": 19,
+      "slug": "technical-seo-modern-web-applications-checklist",
+      "title": "Technical SEO for Modern Web Applications: A Production-Ready Engineering Checklist",
+      "primaryTopic": "Technical SEO modern web applications",
+      "searchIntent": "Informational / Implementation Guide",
+      "wordCount": 566,
+      "serviceBridge": "seo-digital-growth",
+      "currentProject": "fair-comment",
+      "caseStudyDecision": "KEEP",
+      "overallScore": 8.9,
+      "verdict": "KEEP",
+      "sources": [
+        "Google Search Central: Understanding How Googlebot Crawls and Renders JavaScript (developers.google.com/search)",
+        "Schema.org Community Vocabulary Specifications",
+        "W3C Web Standards on Semantic Markup and Accessibility"
+      ],
+      "relatedSlugs": [
+        "nextjs-app-router-seo-guide",
+        "improve-core-web-vitals-nextjs",
+        "headless-ecommerce-growing-business-guide"
+      ]
+    },
+    {
+      "index": 20,
+      "slug": "headless-ecommerce-growing-business-guide",
+      "title": "Headless E-commerce: When Does It Make Strategic Sense for a Growing Business?",
+      "primaryTopic": "Headless ecommerce for growing business",
+      "searchIntent": "Commercial Investigation / Strategic Comparison",
+      "wordCount": 558,
+      "serviceBridge": "ecommerce-solutions",
+      "currentProject": "studio-2020",
+      "caseStudyDecision": "REMOVE",
+      "overallScore": 8.3,
+      "verdict": "MAJOR EDIT",
+      "sources": [
+        "Shopify Developer Documentation: Headless Architecture with Storefront API (shopify.dev/docs/storefronts/headless)",
+        "Commercetools: Decoupled Architecture Whitepaper"
+      ],
+      "relatedSlugs": [
+        "nextjs-vs-wordpress-business-comparison",
+        "improve-core-web-vitals-nextjs",
+        "nextjs-app-router-seo-guide"
+      ]
+    }
+  ]
+}

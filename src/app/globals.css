@@ -1,26 +1,375 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-primary: #05030D;
+  --bg-surface: #080512;
+  --bg-card: #0B0717;
+  
+  --neon-cyan: #00F5FF;
+  --neon-cyan-hover: #00D9FF;
+  --neon-cyan-glow: rgba(0, 245, 255, 0.25);
+  --neon-cyan-subtle: rgba(0, 245, 255, 0.08);
+
+  --electric-purple: #8B2CFF;
+  --electric-purple-hover: #B026FF;
+  --electric-purple-glow: rgba(139, 44, 255, 0.25);
+  --electric-purple-subtle: rgba(139, 44, 255, 0.08);
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #E7E5EE;
+  --text-muted: #9290A3;
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-prominent: rgba(255, 255, 255, 0.16);
+  --border-cyan: rgba(0, 245, 255, 0.3);
+  --border-purple: rgba(139, 44, 255, 0.3);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --color-canvas: var(--bg-primary);
+  --color-surface: var(--bg-surface);
+  --color-surface-card: var(--bg-card);
+  
+  --color-neon-cyan: var(--neon-cyan);
+  --color-neon-cyan-hover: var(--neon-cyan-hover);
+  --color-neon-cyan-glow: var(--neon-cyan-glow);
+
+  --color-electric-purple: var(--electric-purple);
+  --color-electric-purple-hover: var(--electric-purple-hover);
+  --color-electric-purple-glow: var(--electric-purple-glow);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+
+  --font-heading: var(--font-space-grotesk), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Base resets & typography */
+html {
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
+  overflow-x: hidden;
+  min-height: 100vh;
+  selection-background-color: #00F5FF;
+  selection-color: #05030D;
 }
+
+::selection {
+  background: rgba(0, 245, 255, 0.3);
+  color: #FFFFFF;
+}
+
+/* Headings font */
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-space-grotesk), sans-serif;
+}
+
+/* Subtle glow effects */
+.glow-cyan-sm {
+  box-shadow: 0 0 15px rgba(0, 245, 255, 0.2);
+}
+
+.glow-cyan-md {
+  box-shadow: 0 0 30px rgba(0, 245, 255, 0.25);
+}
+
+.glow-purple-sm {
+  box-shadow: 0 0 15px rgba(139, 44, 255, 0.2);
+}
+
+.glow-purple-md {
+  box-shadow: 0 0 30px rgba(139, 44, 255, 0.25);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 16px rgba(0, 245, 255, 0.4);
+}
+
+.text-glow-purple {
+  text-shadow: 0 0 16px rgba(139, 44, 255, 0.4);
+}
+
+/* Perspective Grid Background */
+.digital-grid-bg {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.perspective-grid {
+  transform: perspective(1000px) rotateX(60deg) translateY(-100px);
+  transform-origin: top center;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 80%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 80%);
+}
+
+/* Keyframe animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.04);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+@keyframes beaconPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+.animate-beacon {
+  animation: beaconPulse 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Hero Entrance Sequence (GPU compositor, zero-JS layout shift) */
+@keyframes heroFadeUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-hero-badge {
+  animation: heroFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+.animate-hero-title {
+  animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both;
+}
+
+.animate-hero-desc {
+  animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.36s both;
+}
+
+.animate-hero-cta {
+  animation: heroFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.48s both;
+}
+
+.animate-hero-tags {
+  animation: heroFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both;
+}
+
+/* Ambient Slow Drift Keyframes (GPU compositor-only) */
+@keyframes ambientGlowCyan {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.12;
+  }
+  50% {
+    transform: translate3d(20px, -15px, 0) scale(1.08);
+    opacity: 0.18;
+  }
+}
+
+@keyframes ambientGlowPurple {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.14;
+  }
+  50% {
+    transform: translate3d(-20px, 15px, 0) scale(1.06);
+    opacity: 0.22;
+  }
+}
+
+.animate-ambient-cyan {
+  animation: ambientGlowCyan 14s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.animate-ambient-purple {
+  animation: ambientGlowPurple 16s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+/* Laser sweep keyframe for borders */
+@keyframes laserSweep {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+.animate-laser-sweep {
+  animation: laserSweep 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Scroll reveal utility classes (GPU compositor) */
+.reveal-base {
+  opacity: 0;
+  transform: translate3d(0, 20px, 0);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Technical micro-grid overlay for card interiors */
+.tech-grid-pattern {
+  background-size: 20px 20px;
+  background-image: radial-gradient(rgba(0, 245, 255, 0.12) 1px, transparent 1px);
+}
+
+/* Architecture Node Pulse */
+@keyframes nodePulseAnim {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}
+
+.animate-node-pulse {
+  animation: nodePulseAnim 3.5s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+/* Subtle Signal Dash Flow */
+@keyframes signalFlowAnim {
+  0% {
+    stroke-dashoffset: 24;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-signal-flow {
+  animation: signalFlowAnim 4s linear infinite;
+}
+
+/* Hero Horizon Shimmer */
+@keyframes horizonShimmerAnim {
+  0%, 80%, 100% {
+    opacity: 0;
+    transform: translate3d(-50%, 0, 0) scaleX(0.8);
+  }
+  40% {
+    opacity: 0.22;
+    transform: translate3d(-50%, 0, 0) scaleX(1);
+  }
+}
+
+.animate-horizon-shimmer {
+  animation: horizonShimmerAnim 12s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+/* Hero Concentric Digital Architecture Core Animations */
+@keyframes coreSpinAnim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes coreReverseAnim {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes coreBreatheAnim {
+  0%, 100% {
+    transform: translate3d(-50%, -50%, 0) scale(1);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translate3d(-50%, -50%, 0) scale(1.05);
+    opacity: 0.55;
+  }
+}
+
+.animate-core-spin {
+  animation: coreSpinAnim 60s linear infinite;
+  will-change: transform;
+}
+
+.animate-core-reverse {
+  animation: coreReverseAnim 80s linear infinite;
+  will-change: transform;
+}
+
+.animate-core-breathe {
+  animation: coreBreatheAnim 8s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+/* Reduced motion support: completely disables all motion immediately */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal-base {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .animate-ambient-cyan,
+  .animate-ambient-purple,
+  .animate-laser-sweep,
+  .animate-node-pulse,
+  .animate-signal-flow,
+  .animate-horizon-shimmer,
+  .animate-beacon,
+  .animate-pulse-glow,
+  .animate-core-spin,
+  .animate-core-reverse,
+  .animate-core-breathe {
+    animation: none !important;
+  }
+}
+

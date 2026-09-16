@@ -1,0 +1,26 @@
+export const companyData = {
+  legalName: "Inflixt Global PVT LTD",
+  brandName: "INFLIXT",
+  tagline: "Design. Develop. Dominate.",
+  corePositioning: "AI-Powered Software Development & Digital Solutions Company",
+  supportingPositioning: "Modern digital products and business solutions for growing businesses. Based in Sri Lanka. Building for the world.",
+  location: "Sri Lanka",
+  locationDisplay: "Based in Sri Lanka. Building for the world.",
+  url: "https://inflixt.com",
+  contactEmail: "dinesh@inflixtglobal.com",
+  registration: {
+    companyName: "INFLIXT GLOBAL (PVT) LTD",
+    registrationNumber: "PV 00347835",
+    entityType: "Private Company with Limited Liability",
+    statutoryBasis: "The Companies Act No. 7 of 2007",
+    incorporationDate: "25 November 2025",
+    jurisdiction: "Democratic Socialist Republic of Sri Lanka",
+  },
+  founder: {
+    name: "Dinesh",
+    fullName: "Dinesh Madhusankha",
+    title: "Founder, Inflixt Global",
+    email: "dinesh@inflixtglobal.com",
+    image: "/dinesh_madhusankha.webp",
+  },
+};

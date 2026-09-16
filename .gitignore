@@ -19,12 +19,16 @@
 
 # production
 /build
+dist/
 
 # misc
 .DS_Store
+Thumbs.db
+.vscode/
 *.pem
 
 # debug
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -39,3 +43,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# scratch & development testing
+scratch/
