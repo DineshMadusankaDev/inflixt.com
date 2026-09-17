@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { InflixtAiLoader } from "@/components/ai/InflixtAiLoader";
+import { BackToTop } from "@/components/ui/BackToTop";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -134,6 +135,9 @@ export default function RootLayout({
 
         {/* 12. Floating INFLIXT AI Chat Experience */}
         <InflixtAiLoader />
+
+        {/* 13. Floating Back to Top Control */}
+        <BackToTop />
       </body>
     </html>
   );
