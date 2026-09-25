@@ -122,6 +122,11 @@ export function Footer() {
             ))}
           </div>
         </div>
+
+        {/* Taskpull Ownership Verification */}
+        <div className="mt-6 text-center text-xs font-mono text-[#9290A3]">
+          TASKPULL-759838E5C49FF5D6
+        </div>
       </Container>
     </footer>
   );
